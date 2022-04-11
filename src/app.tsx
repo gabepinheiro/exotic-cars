@@ -1,11 +1,9 @@
-import { Button, Logo } from '@/components'
+import { Header } from './components/layouts/header'
 
 export function App () {
   return (
     <>
-      <Logo />
-      <Button>Sign up</Button>
-      <Button variant='outlined'>Sign in</Button>
+      <Header />
     </>
   )
 }

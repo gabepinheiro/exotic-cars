@@ -30,7 +30,15 @@ export const Model = styled.p`
   margin-bottom: 0.6rem;
 `
 
+export const ThumbWrapper = styled.div`
+  height: 107px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export const Thumb = styled.img`
+  width: 100%;
   display: block;
   object-fit: cover;
   margin-bottom: 0.3rem;

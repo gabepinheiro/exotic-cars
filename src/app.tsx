@@ -1,9 +1,9 @@
-import { Button } from '@/components'
+import { Button, Logo } from '@/components'
 
 export function App () {
   return (
     <>
-      <h1>Exotic Cars</h1>
+      <Logo />
       <Button>Sign up</Button>
       <Button variant='outlined'>Sign in</Button>
     </>

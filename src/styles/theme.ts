@@ -1,4 +1,8 @@
 export const theme = {
+  grid: {
+    container: '130rem',
+  },
+
   font: '"Segoe UI", "Helvetica Neue", Helvetica, sans-serif',
 
   colors: {

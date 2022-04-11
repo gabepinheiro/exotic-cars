@@ -1,9 +1,11 @@
-import { Header } from './components/layouts/header'
+import { MainLayout } from './components/layouts/main-layout'
 
 export function App () {
   return (
-    <>
-      <Header />
-    </>
+    <MainLayout>
+      <div>
+        <h2>Home</h2>
+      </div>
+    </MainLayout>
   )
 }

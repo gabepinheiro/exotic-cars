@@ -1,11 +1,17 @@
-import { MainLayout } from './components/layouts/main-layout'
+import { Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { MainLayout } from '@/components'
+import { HomePage, CarDetailsPage } from '@/pages'
 
 export function App () {
   return (
-    <MainLayout>
-      <div>
-        <h2>Home</h2>
-      </div>
-    </MainLayout>
+    <Suspense fallback='Loading...'>
+      <MainLayout>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/car-details' element={<CarDetailsPage />} />
+        </Routes>
+      </MainLayout>
+    </Suspense>
   )
 }

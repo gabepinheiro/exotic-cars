@@ -50,4 +50,11 @@ export const Wrapper = styled(Link)<Props>`
     height: 27px;
     fill: currentColor;
   }
+
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    opacity: 0.7;
+    transform: translateY(-3px);
+  }
 `

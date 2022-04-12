@@ -1,12 +1,7 @@
+import { Car } from '@/resources/types'
 import * as S from './styles'
 
-type CarCardProps = {
-  brand: string
-  model: string
-  thumb: string
-  rentAmount: number
-  per: string
-}
+type CarCardProps = Omit<Car, 'id'>
 
 export const CarCard = (car: CarCardProps) => {
   return (

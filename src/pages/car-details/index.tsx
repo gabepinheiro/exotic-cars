@@ -1,8 +1,10 @@
+import * as S from './styles'
+
 function CarDetailsPage () {
   return (
-    <div>
+    <S.Wrapper>
       <h2>Car Details Page</h2>
-    </div>
+    </S.Wrapper>
   )
 }
 

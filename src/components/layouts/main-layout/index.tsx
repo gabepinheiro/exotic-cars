@@ -1,5 +1,6 @@
 import { Header, ContentContainer } from '@/components'
 import { ReactNode } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import * as S from './styles'
 
@@ -8,10 +9,13 @@ type MainLayoutProps = {
 }
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
+  const { pathname } = useLocation()
+  const isCarDetailsPage = pathname === '/car-details'
+
   return (
     <S.Wrapper>
       <Header />
-      <S.MainContainer>
+      <S.MainContainer isCarDetailsPage={isCarDetailsPage}>
         <ContentContainer>
           {children}
         </ContentContainer>

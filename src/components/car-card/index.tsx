@@ -1,7 +1,6 @@
 import * as S from './styles'
 
 type CarCardProps = {
-  id: string
   brand: string
   model: string
   thumb: string

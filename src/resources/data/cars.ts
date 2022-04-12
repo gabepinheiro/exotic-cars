@@ -1,6 +1,5 @@
 export const cars = [
   {
-    id: new Date().getTime().toString(),
     brand: 'Ferrari',
     model: 'California',
     thumb: 'assets/thumbs/ferrari-california.png',
@@ -8,7 +7,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Nissan',
     model: 'GT-R',
     thumb: 'assets/thumbs/nissan-gtr.png',
@@ -16,7 +14,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Mclaren',
     model: '570s',
     thumb: 'assets/thumbs/mclaren-570s.png',
@@ -24,7 +21,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'BMW',
     model: 'M6 Gran Coupe',
     thumb: 'assets/thumbs/bmw-m6-gran-coupe.png',
@@ -32,7 +28,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Porsche',
     model: '911 GT3 RS',
     thumb: 'assets/thumbs/porsche-911-gt3-rs.png',
@@ -40,7 +35,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Bentley',
     model: 'Continental GT',
     thumb: 'assets/thumbs/bentley-continental-gt.png',
@@ -48,7 +42,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'BMW',
     model: 'M1 Competition',
     thumb: 'assets/thumbs/bmw-m1-competition.png',
@@ -56,7 +49,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Alfa Romeo',
     model: '4c Spider',
     thumb: 'assets/thumbs/alfa-romeo-4c-spider.png',
@@ -64,7 +56,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'McLaren',
     model: 'P1 GTR',
     thumb: 'assets/thumbs/mclaren-p1-gtr.png',
@@ -72,7 +63,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Lamborghini',
     model: 'Aventador',
     thumb: 'assets/thumbs/lamborghini-aventador.png',
@@ -80,7 +70,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Bugatti',
     model: 'Aventador',
     thumb: 'assets/thumbs/bugatti-veryon-spyder.png',
@@ -88,7 +77,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Chevrolet',
     model: 'Corvett',
     thumb: 'assets/thumbs/chevrolet-corvett.png',
@@ -96,7 +84,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Ferrari',
     model: 'Italia',
     thumb: 'assets/thumbs/ferrari-458-italia.png',
@@ -104,7 +91,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Rolls Royce',
     model: 'Wraith',
     thumb: 'assets/thumbs/rolls-royce-wraith.png',
@@ -112,7 +98,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Porsche',
     model: '911 GT3',
     thumb: 'assets/thumbs/porsche-911-gt3.png',
@@ -120,7 +105,6 @@ export const cars = [
     per: 'day',
   },
   {
-    id: new Date().getTime().toString(),
     brand: 'Mercedes-benz',
     model: 'AMG GTS',
     thumb: 'assets/thumbs/mercedes-amg-gts.png',

@@ -6,8 +6,8 @@ import * as S from './styles'
 function HomePage () {
   return (
     <S.Wrapper>
-      {DUMMY_CARS.map(car => (
-        <CarCard key={car.id} {...car} />
+      {DUMMY_CARS.map((car, index) => (
+        <CarCard key={index} {...car} />
       ))}
     </S.Wrapper>
   )

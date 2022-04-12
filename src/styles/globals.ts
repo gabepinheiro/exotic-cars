@@ -22,6 +22,10 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
   }
 
+  .root {
+    position: relative;
+  }
+
   ${({ theme }) => css`
     body {
       font-family: ${theme.font};

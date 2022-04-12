@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { MainLayout } from '@/components'
+import { MainLayout, TopButton } from '@/components'
 import { HomePage, CarDetailsPage } from '@/pages'
 
 export function App () {
@@ -12,6 +12,7 @@ export function App () {
           <Route path='/car-details' element={<CarDetailsPage />} />
         </Routes>
       </MainLayout>
+      <TopButton />
     </Suspense>
   )
 }

@@ -4,6 +4,13 @@ import { MainLayout, TopButton } from '@/components'
 import { HomePage, CarDetailsPage } from '@/pages'
 
 export function App () {
+  const handlerScrollTop = () => {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0,
+    })
+  }
+
   return (
     <Suspense fallback='Loading...'>
       <MainLayout>
@@ -12,7 +19,7 @@ export function App () {
           <Route path='/car-details' element={<CarDetailsPage />} />
         </Routes>
       </MainLayout>
-      <TopButton />
+      <TopButton onClick={handlerScrollTop} />
     </Suspense>
   )
 }

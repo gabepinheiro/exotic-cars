@@ -32,11 +32,11 @@ export const Wrapper = styled(Link)<Props>`
   border-radius: 100px;
   text-decoration: none;
   height: 5.0rem;
-  padding: 1.6rem 3.2rem;
+  padding: 1.6rem 2.6rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.2rem;
   font-weight: 300;
 
   ${({ color, variant, reverse }) => css`

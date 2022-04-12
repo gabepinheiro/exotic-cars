@@ -1,6 +1,6 @@
 export const theme = {
   grid: {
-    container: '130rem',
+    container: '138rem',
   },
 
   font: '"Segoe UI", "Helvetica Neue", Helvetica, sans-serif',

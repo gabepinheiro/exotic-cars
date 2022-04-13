@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Car } from '@/resources'
 import { http } from '@/service'
@@ -11,6 +11,14 @@ function CarDetailsPage () {
   const [isFetching, setIsFetching] = useState(true)
   const [car, setCar] = useState<Car | null>(null)
   const [carColorIndex, setCarColorIndex] = useState<number>(0)
+
+  const slideItems = useMemo(() => {
+    return car?.colors.map(({ id, image }) => ({ id, image }))
+  }, [car])
+
+  const handleChangeColorIndex = useCallback((index: number) => {
+    setCarColorIndex(index)
+  }, [])
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -26,10 +34,6 @@ function CarDetailsPage () {
 
     fetchCar()
   }, [carId])
-
-  const slideItems = useMemo(() => {
-    return car?.colors.map(({ id, image }) => ({ id, image }))
-  }, [car])
 
   if (isFetching && !car) {
     return null
@@ -67,7 +71,10 @@ function CarDetailsPage () {
           </S.Center>
 
           <S.SliderWrapper>
-            <CarSlider items={slideItems!} />
+            <CarSlider
+              items={slideItems!}
+              onChangeColorIndex={handleChangeColorIndex}
+            />
           </S.SliderWrapper>
         </>
       )}

@@ -15,9 +15,10 @@ type SlideItem = {
 
 type CarSliderProps = {
   items: SlideItem[]
+  onChangeColorIndex: (index: number) => void
 }
 
-export const CarSlider = ({ items }: CarSliderProps) => {
+export const CarSlider = ({ items, onChangeColorIndex }: CarSliderProps) => {
   return (
     <S.Wrapper>
       <Swiper
@@ -25,6 +26,7 @@ export const CarSlider = ({ items }: CarSliderProps) => {
         slidesPerView={3}
         centeredSlides
         centeredSlidesBounds
+        onSlideChange={({ realIndex }) => onChangeColorIndex(realIndex)}
         navigation={{
           prevEl: '.swiper-button-prev',
           nextEl: '.swiper-button-next',

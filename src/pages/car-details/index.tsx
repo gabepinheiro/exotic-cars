@@ -1,4 +1,5 @@
-import { ButtonLink } from '@/components'
+import { ButtonLink, CarSlider } from '@/components'
+
 import * as S from './styles'
 
 function CarDetailsPage () {
@@ -24,6 +25,10 @@ function CarDetailsPage () {
       <S.Center>
         <ButtonLink to='#'>Book now</ButtonLink>
       </S.Center>
+
+      <S.SliderWrapper>
+        <CarSlider />
+      </S.SliderWrapper>
     </S.Wrapper>
   )
 }

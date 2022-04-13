@@ -55,3 +55,7 @@ export const Center = styled.div`
   display: flex;
   justify-content: center;
 `
+
+export const SliderWrapper = styled.div`
+  margin: 6.4rem 0;
+`

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Car } from '@/resources'
 import { http } from '@/service'
 import { ButtonLink, CarSlider, LoadingOverlay } from '@/components'
@@ -8,6 +8,8 @@ import * as S from './styles'
 
 function CarDetailsPage () {
   const { carId } = useParams<{carId: string}>()
+  const navigate = useNavigate()
+
   const [isFetching, setIsFetching] = useState(true)
   const [car, setCar] = useState<Car | null>(null)
   const [carColorIndex, setCarColorIndex] = useState<number>(0)
@@ -19,6 +21,10 @@ function CarDetailsPage () {
   const handleChangeColorIndex = useCallback((index: number) => {
     setCarColorIndex(index)
   }, [])
+
+  const handleBackToCatalog = useCallback(() => {
+    navigate(-1)
+  }, [navigate])
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -54,7 +60,12 @@ function CarDetailsPage () {
             </S.BrandModelRentWrapper>
           </S.CarInfo>
           <S.CarImageWrapper>
-            <ButtonLink to='#' reverse='true' variant='outlined'>
+            <ButtonLink
+              to='#'
+              reverse='true'
+              variant='outlined'
+              onClick={handleBackToCatalog}
+            >
               Back to catalog
             </ButtonLink>
             <S.CarImage

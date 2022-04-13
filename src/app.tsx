@@ -16,7 +16,7 @@ export function App () {
       <MainLayout>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/car-details' element={<CarDetailsPage />} />
+          <Route path='/car-details/:carId' element={<CarDetailsPage />} />
         </Routes>
       </MainLayout>
       <TopButton onClick={handlerScrollTop} />

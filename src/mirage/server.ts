@@ -2,7 +2,6 @@ import { createServer, Model, Registry } from 'miragejs'
 import { ModelDefinition } from 'miragejs/-types'
 import Schema from 'miragejs/orm/schema'
 import { cars, Car } from '@/resources'
-import { v4 as uuid } from 'uuid'
 
 const CarModel: ModelDefinition<Car> = Model.extend({})
 
@@ -23,10 +22,7 @@ export const makeServer = ({ environment = 'development' }: MakeServerProps) => 
 
     seeds (server) {
       server.db.loadData({
-        cars: cars.map(car => ({
-          id: uuid(),
-          ...car,
-        })),
+        cars,
       })
     },
 

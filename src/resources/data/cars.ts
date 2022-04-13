@@ -1,5 +1,6 @@
 export const cars = [
   {
+    id: 1,
     brand: 'Ferrari',
     model: 'California',
     brandImage: 'assets/ferrari/brand.png',
@@ -25,6 +26,7 @@ export const cars = [
     ],
   },
   {
+    id: 2,
     brand: 'Nissan',
     model: 'GT-R',
     brandImage: 'assets/nissan/brand.png',
@@ -50,6 +52,7 @@ export const cars = [
     ],
   },
   {
+    id: 3,
     brand: 'Mclaren',
     model: '570s',
     brandImage: 'assets/nissan/brand.png',
@@ -75,6 +78,7 @@ export const cars = [
     ],
   },
   {
+    id: 4,
     brand: 'BMW',
     model: 'M6 Gran Coupe',
     brandImage: 'assets/nissan/brand.png',
@@ -100,6 +104,7 @@ export const cars = [
     ],
   },
   {
+    id: 5,
     brand: 'Porsche',
     model: '911 GT3 RS',
     brandImage: 'assets/nissan/brand.png',
@@ -125,6 +130,7 @@ export const cars = [
     ],
   },
   {
+    id: 6,
     brand: 'Bentley',
     model: 'Continental GT',
     brandImage: 'assets/nissan/brand.png',
@@ -150,6 +156,7 @@ export const cars = [
     ],
   },
   {
+    id: 7,
     brand: 'BMW',
     model: 'M1 Competition',
     brandImage: 'assets/nissan/brand.png',
@@ -175,6 +182,7 @@ export const cars = [
     ],
   },
   {
+    id: 8,
     brand: 'Alfa Romeo',
     model: '4c Spider',
     brandImage: 'assets/nissan/brand.png',
@@ -200,6 +208,7 @@ export const cars = [
     ],
   },
   {
+    id: 9,
     brand: 'McLaren',
     model: 'P1 GTR',
     brandImage: 'assets/nissan/brand.png',
@@ -225,6 +234,7 @@ export const cars = [
     ],
   },
   {
+    id: 10,
     brand: 'Lamborghini',
     model: 'Aventador',
     brandImage: 'assets/nissan/brand.png',
@@ -250,6 +260,7 @@ export const cars = [
     ],
   },
   {
+    id: 11,
     brand: 'Bugatti',
     model: 'Aventador',
     brandImage: 'assets/nissan/brand.png',
@@ -275,6 +286,7 @@ export const cars = [
     ],
   },
   {
+    id: 12,
     brand: 'Chevrolet',
     model: 'Corvett',
     brandImage: 'assets/nissan/brand.png',
@@ -300,6 +312,7 @@ export const cars = [
     ],
   },
   {
+    id: 13,
     brand: 'Ferrari',
     model: 'Italia',
     brandImage: 'assets/nissan/brand.png',
@@ -325,6 +338,7 @@ export const cars = [
     ],
   },
   {
+    id: 14,
     brand: 'Rolls Royce',
     model: 'Wraith',
     brandImage: 'assets/nissan/brand.png',
@@ -350,6 +364,7 @@ export const cars = [
     ],
   },
   {
+    id: 15,
     brand: 'Porsche',
     model: '911 GT3',
     brandImage: 'assets/nissan/brand.png',
@@ -375,6 +390,7 @@ export const cars = [
     ],
   },
   {
+    id: 16,
     brand: 'Mercedes-benz',
     model: 'AMG GTS',
     brandImage: 'assets/nissan/brand.png',

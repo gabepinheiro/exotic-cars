@@ -5,7 +5,7 @@ export type CarColor = {
 }
 
 export type Car = {
-  id: string
+  id: number
   brand: string
   model: string
   brandImage: string

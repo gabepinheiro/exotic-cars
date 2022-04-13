@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Car } from '@/resources'
 import { http } from '@/service'
-import { ButtonLink, CarSlider } from '@/components'
+import { ButtonLink, CarSlider, LoadingOverlay } from '@/components'
 
 import * as S from './styles'
 
@@ -36,7 +36,7 @@ function CarDetailsPage () {
   }, [carId])
 
   if (isFetching && !car) {
-    return null
+    return <LoadingOverlay />
   }
 
   return (

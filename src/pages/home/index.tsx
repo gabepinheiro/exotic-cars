@@ -5,6 +5,7 @@ import { CarCard } from '@/components/car-card'
 import { http } from '@/service'
 
 import * as S from './styles'
+import { LoadingOverlay } from '@/components'
 
 function HomePage () {
   const [isFetching, setIsFetching] = useState(true)
@@ -20,7 +21,9 @@ function HomePage () {
     fetchCars()
   }, [])
 
-  if (isFetching) return null
+  if (isFetching) {
+    return <LoadingOverlay />
+  }
 
   return (
     <S.Wrapper>

@@ -14,10 +14,10 @@ export const Header = () => {
     <S.Wrapper>
       <ContentContainer>
         <Logo onClick={handleNavigateHome} />
-        <div>
+        <S.ButtonsWrapper>
           <Button>Sign in</Button>
           <Button variant='outlined'>Sign up</Button>
-        </div>
+        </S.ButtonsWrapper>
       </ContentContainer>
     </S.Wrapper>
   )

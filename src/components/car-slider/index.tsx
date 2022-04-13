@@ -8,7 +8,16 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 
 import * as S from './styles'
 
-export const CarSlider = () => {
+type SlideItem = {
+  id: number
+  image: string
+}
+
+type CarSliderProps = {
+  items: SlideItem[]
+}
+
+export const CarSlider = ({ items }: CarSliderProps) => {
   return (
     <S.Wrapper>
       <Swiper
@@ -22,21 +31,13 @@ export const CarSlider = () => {
         }}
         loop
       >
-        <SwiperSlide>
-          <S.SliderItem>
-            <S.CarImage src='assets/ferrari/italia/red-color.png' />
-          </S.SliderItem>
-        </SwiperSlide>
-        <SwiperSlide>
-          <S.SliderItem>
-            <S.CarImage src='assets/ferrari/italia/yellow-color.png' />
-          </S.SliderItem>
-        </SwiperSlide>
-        <SwiperSlide>
-          <S.SliderItem>
-            <S.CarImage src='assets/ferrari/italia/gray-color.png' />
-          </S.SliderItem>
-        </SwiperSlide>
+        {items.map(({ id, image }) => (
+          <SwiperSlide key={id}>
+            <S.SliderItem>
+              <S.CarImage src={image} />
+            </S.SliderItem>
+          </SwiperSlide>
+        ))}
       </Swiper>
       <button className='swiper-button-prev'>
         <BsArrowLeft />

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Car } from '@/resources'
 import { http } from '@/service'
@@ -27,42 +27,50 @@ function CarDetailsPage () {
     fetchCar()
   }, [carId])
 
+  const slideItems = useMemo(() => {
+    return car?.colors.map(({ id, image }) => ({ id, image }))
+  }, [car])
+
   if (isFetching && !car) {
     return null
   }
 
   return (
     <S.Wrapper>
-      <S.CarInfo>
-        <S.BrandImage
-          src={car?.brandImage}
-          alt={`${car?.brand} ${car?.model}`}
-        />
-        <S.BrandModelRentWrapper>
-          <S.BrandModel>{car?.brand} {car?.model}</S.BrandModel>
-          <S.Rent>{car?.rentAmount}/{car?.per}</S.Rent>
-        </S.BrandModelRentWrapper>
-      </S.CarInfo>
-      <S.CarImageWrapper>
-        <ButtonLink to='#' reverse='true' variant='outlined'>
-          Back to catalog
-        </ButtonLink>
-        <S.CarImage
-          src={car?.colors[carColorIndex].image}
-          alt={car?.model}
-        />
-        <S.Color>
-          <span>{String(carColorIndex + 1).padStart(2, '0')}</span>
-          <span className='colorName'>{car?.colors[carColorIndex].color}</span>
-        </S.Color>
-      </S.CarImageWrapper>
-      <S.Center>
-        <ButtonLink to='#'>Book now</ButtonLink>
-      </S.Center>
+      {car && (
+        <>
+          <S.CarInfo>
+            <S.BrandImage
+              src={car.brandImage}
+              alt={`${car.brand} ${car.model}`}
+            />
+            <S.BrandModelRentWrapper>
+              <S.BrandModel>{car.brand} {car.model}</S.BrandModel>
+              <S.Rent>{car.rentAmount}/{car.per}</S.Rent>
+            </S.BrandModelRentWrapper>
+          </S.CarInfo>
+          <S.CarImageWrapper>
+            <ButtonLink to='#' reverse='true' variant='outlined'>
+              Back to catalog
+            </ButtonLink>
+            <S.CarImage
+              src={car.colors[carColorIndex].image}
+              alt={car.model}
+            />
+            <S.Color>
+              <span>{String(carColorIndex + 1).padStart(2, '0')}</span>
+              <span className='colorName'>{car.colors[carColorIndex].color}</span>
+            </S.Color>
+          </S.CarImageWrapper>
+          <S.Center>
+            <ButtonLink to='#'>Book now</ButtonLink>
+          </S.Center>
 
-      <S.SliderWrapper>
-        <CarSlider />
-      </S.SliderWrapper>
+          <S.SliderWrapper>
+            <CarSlider items={slideItems!} />
+          </S.SliderWrapper>
+        </>
+      )}
     </S.Wrapper>
   )
 }

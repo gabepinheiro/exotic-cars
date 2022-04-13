@@ -16,7 +16,7 @@ function CarDetailsPage () {
         <ButtonLink to='#' reverse='true' variant='outlined'>
           Back to catalog
         </ButtonLink>
-        <S.CarImage src='assets/ferrari/gray-color.png' />
+        <S.CarImage src='assets/ferrari/italia/gray-color.png' />
         <S.Color>
           <span>03</span>
           <span className='colorName'>Gray</span>

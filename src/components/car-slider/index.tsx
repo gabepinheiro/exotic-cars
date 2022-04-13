@@ -24,17 +24,17 @@ export const CarSlider = () => {
       >
         <SwiperSlide>
           <S.SliderItem>
-            <S.CarImage src='assets/ferrari/red-color.png' />
+            <S.CarImage src='assets/ferrari/italia/red-color.png' />
           </S.SliderItem>
         </SwiperSlide>
         <SwiperSlide>
           <S.SliderItem>
-            <S.CarImage src='assets/ferrari/yellow-color.png' />
+            <S.CarImage src='assets/ferrari/italia/yellow-color.png' />
           </S.SliderItem>
         </SwiperSlide>
         <SwiperSlide>
           <S.SliderItem>
-            <S.CarImage src='assets/ferrari/gray-color.png' />
+            <S.CarImage src='assets/ferrari/italia/gray-color.png' />
           </S.SliderItem>
         </SwiperSlide>
       </Swiper>

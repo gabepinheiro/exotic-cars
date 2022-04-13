@@ -37,6 +37,12 @@ export const makeServer = ({ environment = 'development' }: MakeServerProps) => 
       this.get('/cars', (schema: AppSchema) => {
         return schema.all('car')
       })
+
+      this.get('/cars/:carId', (schema: AppSchema, req) => {
+        const { carId } = req.params
+
+        return schema.find('car', carId)
+      })
     },
   })
 }

@@ -6,7 +6,7 @@ function CarDetailsPage () {
   return (
     <S.Wrapper>
       <S.CarInfo>
-        <S.BrandImage src='assets/ferrari/brand-img.png' alt='Ferrari' />
+        <S.BrandImage src='assets/ferrari/brand.png' alt='Ferrari' />
         <S.BrandModelRentWrapper>
           <S.BrandModel>Ferrari Italia</S.BrandModel>
           <S.Rent>$725/day</S.Rent>

@@ -2,9 +2,27 @@ export const cars = [
   {
     brand: 'Ferrari',
     model: 'California',
-    thumb: 'assets/thumbs/ferrari-california.png',
+    brandImage: 'assets/ferrari/brand.png',
+    thumb: 'assets/thumb.png',
     rentAmount: 725,
     per: 'day',
+    colors: [
+      {
+        id: 1,
+        color: 'red',
+        image: 'assets/ferrari/red-color.png',
+      },
+      {
+        id: 2,
+        color: 'gray',
+        image: 'assets/ferrari/gray-color.png',
+      },
+      {
+        id: 3,
+        color: 'yellow',
+        image: 'assets/ferrari/yellow-color.png',
+      },
+    ],
   },
   {
     brand: 'Nissan',

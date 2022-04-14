@@ -13,6 +13,13 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 4.0rem;
+
+  @media (max-width: 786px) {
+    flex-direction: column;
+    height: auto;
+    padding: 1.6rem;
+    gap: 1.6rem;
+ }
 `
 
 export const SearchButton = styled.button`
@@ -33,6 +40,11 @@ export const SearchButton = styled.button`
   &:hover {
     transform: translateY(-3px);
     opacity: 0.8;
+  }
+
+  @media (max-width: 786px) {
+    width: 45px;
+    height: 45px;
   }
 
   svg {
@@ -73,6 +85,11 @@ export const DateInputGroup = styled.div`
   svg {
     width: 20px;
     height: 20px;
+
+    @media (max-width: 786px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 `
 

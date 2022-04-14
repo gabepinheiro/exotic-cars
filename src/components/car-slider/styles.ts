@@ -25,9 +25,10 @@ export const CarImage = styled.img`
 
 export const Wrapper = styled.section`
   position: relative;
+  z-index: 0;
 
   .swiper{
-    padding: 3.2rem;
+    padding: 1.8rem;
   }
 
   .swiper-wrapper {

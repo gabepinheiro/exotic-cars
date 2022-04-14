@@ -13,7 +13,6 @@ export const Wrapper = styled.button`
   position: fixed;
   right:5vw;
   bottom:5vh;
-
   transition: opacity 0.2s ease-in;
 
   &:hover {

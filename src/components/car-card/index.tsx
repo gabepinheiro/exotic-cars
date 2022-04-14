@@ -8,8 +8,17 @@ type CarCardProps = Omit<Car, 'id' | 'colors'>
 export const CarCard = (car: CarCardProps) => {
   return (
     <S.Wrapper>
-      <S.Brand>{car.brand}</S.Brand>
-      <S.Model>{car.model}</S.Model>
+      <S.Header>
+        <S.BrandModelWrapper>
+          <S.Brand>{car.brand}</S.Brand>
+          <S.Model>{car.model}</S.Model>
+        </S.BrandModelWrapper>
+        <S.DotsWrapper>
+          <S.Dot />
+          <S.Dot />
+          <S.Dot />
+        </S.DotsWrapper>
+      </S.Header>
       <S.ThumbWrapper>
         <S.Thumb src={car.thumb} alt={`${car.brand} ${car.model}`} />
       </S.ThumbWrapper>

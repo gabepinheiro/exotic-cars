@@ -16,7 +16,14 @@ export const Wrapper = styled.article`
       box-shadow: 0px 5px 10px rgba(0,0,0, 0.1);
     }
   `}
-  `
+`
+
+export const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+`
+
+export const BrandModelWrapper = styled.div``
 
 export const Brand = styled.h3`
   margin-bottom: 0.4rem;
@@ -55,4 +62,23 @@ export const Rent = styled.p`
     font-size: 1.4rem;
     font-weight: 300;
   }
+`
+
+export const DotsWrapper = styled.div`
+  display: flex;
+  gap: 3px;
+
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+`
+
+export const Dot = styled.span`
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #C8C8CA ;
+  box-shadow: 0px 5px 10px rgba(0,0,0, 0.1);
 `

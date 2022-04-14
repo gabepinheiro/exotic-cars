@@ -29,14 +29,14 @@ export const Model = styled.p`
 
 export const ThumbWrapper = styled.div`
   padding-top: 1.8rem;
-  height: 107px;
+  height: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 
 export const Thumb = styled.img`
-  width: 100%;
+  width: 25rem;
   display: block;
   object-fit: cover;
 `

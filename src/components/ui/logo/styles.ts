@@ -5,6 +5,10 @@ export const Wrapper = styled.h1`
   text-transform: uppercase;
   cursor: pointer;
 
+  @media (max-width: 786px) {
+    font-size: 2rem;
+  }
+
   span {
     font-size: 1.6rem;
     font-weight: lighter;

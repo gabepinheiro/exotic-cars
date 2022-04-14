@@ -1,6 +1,11 @@
 import { useNavigate } from 'react-router-dom'
-import { Button, Logo } from '@/components/ui'
-import { ContentContainer } from '@/components/layouts'
+import {
+  ContentContainer,
+  Button,
+  Logo,
+  SearchBar,
+} from '@/components'
+
 import * as S from './styles'
 
 export const Header = () => {
@@ -14,6 +19,7 @@ export const Header = () => {
     <S.Wrapper>
       <ContentContainer>
         <Logo onClick={handleNavigateHome} />
+        <SearchBar />
         <S.ButtonsWrapper>
           <Button>Sign in</Button>
           <Button variant='outlined'>Sign up</Button>

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { getCurrencyFormatted } from '@/utils/getCurrecyFormatted'
 import { Car } from '@/resources'
 import { http } from '@/service'
 import { ButtonLink, CarSlider, LoadingOverlay } from '@/components'
@@ -56,7 +57,7 @@ function CarDetailsPage () {
             />
             <S.BrandModelRentWrapper>
               <S.BrandModel>{car.brand} {car.model}</S.BrandModel>
-              <S.Rent>{car.rentAmount}/{car.per}</S.Rent>
+              <S.Rent>{getCurrencyFormatted(car.rentAmount)}/{car.per}</S.Rent>
             </S.BrandModelRentWrapper>
           </S.CarInfo>
           <S.CarImageWrapper>

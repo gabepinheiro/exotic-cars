@@ -11,13 +11,75 @@ export const Wrapper = styled.header`
 
     ${ContentContainer} {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+
+      @media (min-width: 786px) {
+        justify-content: space-between;
+      }
     }
   `}
+`
+
+export const LogoWrapper = styled.div`
+  @media (max-width: 786px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `
 
 export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 1.8rem;
+`
+
+export const MenuFull = styled.menu<{isOpen: boolean}>`
+  ${({ isOpen }) => css`
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: opacity 0.3s ease-in-out;
+    opacity: ${isOpen ? 1 : 0};
+    pointer-events: ${isOpen ? 'all' : 'none'};
+    visibility: ${isOpen ? 'visible' : 'hidden'};
+    ${ButtonsWrapper} {
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+  `}
+`
+
+export const Desktop = styled.div`
+  display: none;
+  @media (min-width: 786px) {
+    display: block;
+  }
+`
+
+export const Mobile = styled.div`
+  display: block;
+  cursor: pointer;
+
+  @media (min-width: 786px) {
+    display: none;
+  }
+`
+
+export const CloseIconWrapper = styled.div`
+  cursor: pointer;
+  position: absolute;
+  top:0;
+  left: 0;
+  margin: 1.8rem;
 `

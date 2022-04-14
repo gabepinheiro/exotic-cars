@@ -17,6 +17,10 @@ export const CarImage = styled.img`
   display: block;
   transform: translateX(3.6rem) scale(1.1);
   object-fit: cover;
+
+  @media (max-width: 786px) {
+    width: 25rem;
+  }
 `
 
 export const Wrapper = styled.section`
@@ -46,6 +50,10 @@ export const Wrapper = styled.section`
 
         ${CarImage} {
           transform: translate(1.6rem, 1.6rem) scale(1.35);
+
+          @media (max-width: 786px) {
+            transform: none;
+          }
         }
       }
     }

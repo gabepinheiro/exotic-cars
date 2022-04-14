@@ -23,7 +23,8 @@ export const CarSlider = ({ items, onChangeColorIndex }: CarSliderProps) => {
     <S.Wrapper>
       <Swiper
         modules={[Navigation]}
-        slidesPerView={3}
+        slidesPerView={1}
+        spaceBetween={80}
         centeredSlides
         centeredSlidesBounds
         onSlideChange={({ realIndex }) => onChangeColorIndex(realIndex)}
@@ -32,6 +33,11 @@ export const CarSlider = ({ items, onChangeColorIndex }: CarSliderProps) => {
           nextEl: '.swiper-button-next',
         }}
         loop
+        breakpoints={{
+          786: {
+            slidesPerView: 3,
+          },
+        }}
       >
         {items.map(({ id, image }) => (
           <SwiperSlide key={id}>
